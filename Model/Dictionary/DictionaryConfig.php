@@ -43,10 +43,10 @@ class DictionaryConfig
     private function fromArray($config)
     {
         $this->dictionaryClass = isset($config['dictionary_class']) && $config['dictionary_class'] ? $config['dictionary_class'] : 'Webit\Common\DictionaryBundle\Model\Dictionary\Dictionary';
-        $this->name = $config['dictionary_name'];
-        $this->itemClass = $config['item_class'];
-        $this->storageType = $config['storage_type'];
-        $this->root = $config['root'];
+        $this->name = isset($config['dictionary_name']) ? $config['dictionary_name'] : null;
+        $this->itemClass = isset($config['item_class']) ? $config['item_class'] : null;
+        $this->storageType = isset($config['storage_type']) ? $config['storage_type'] : null;
+        $this->root = isset($config['root']) ? $config['root'] : null;
 
     }
 
